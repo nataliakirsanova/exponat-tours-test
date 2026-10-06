@@ -767,14 +767,35 @@ body{margin:0}
   .сб-3 .итог__текст{grid-column:1;max-width:none}
   .сб-3 .кнопка{grid-column:2;margin-top:0}
 }
-</style></head>
+</style><style id="мобильное-меню">
+/* Мобильное меню (решение человека, 06.10.2026) — только до 999 px; компьютер не меняется.
+   Шапка закреплена сверху всегда; гамбургер открывает панель на весь экран под шапкой: пять пунктов + главная кнопка. */
+.сб-1 .меню__кнопка{display:none}
+.сб-1 .бургер .ик-закрыть{display:none}
+@media (max-width:999px){
+  .сб-1{padding-top:69px}                                  /* место под закреплённую шапку: первый экран не сдвигается */
+  .сб-1 .шапка{position:fixed;top:0;left:0;right:0;z-index:50}
+  [id^="экран-"]{scroll-margin-top:69px}                   /* раздел встаёт под шапкой, а не под неё */
+  .меню-открыто .сб-1 .бургер .ик-меню{display:none}
+  .меню-открыто .сб-1 .бургер .ик-закрыть{display:block}
+  .меню-открыто .сб-1 .меню{display:flex;flex-direction:column;position:fixed;top:69px;left:0;right:0;bottom:0;z-index:49;
+    padding:8px var(--поле) 32px;background:var(--белый);overflow-y:auto;overscroll-behavior:contain;animation:меню-появление .18s ease-out}
+  .сб-1 .меню a:not(.кнопка){display:flex;align-items:center;min-height:56px;padding:12px 0;border-bottom:1px solid var(--линия);
+    font-family:var(--заголовки);font-weight:600;font-size:22px;line-height:1.25;letter-spacing:-.01em;color:var(--чернила)}
+  .сб-1 .меню a:not(.кнопка):active{color:var(--красный)}
+  .меню-открыто .сб-1 .меню__кнопка{display:flex;margin-top:28px;flex:none}
+}
+@keyframes меню-появление{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (max-width:999px) and (prefers-reduced-motion:reduce){.меню-открыто .сб-1 .меню{animation:none}}
+</style>
+</head>
 <body>
 <!-- ===== экран 1 ===== -->
 <div class="сб-1">
 <header class="шапка"><div class="обёртка">
   <a href="#"><img class="знак" src="logo.png" alt="Экспонат" width="328" height="294"></a>
-  <nav class="меню" aria-label="Разделы"><a href="#экран-3">Программа</a><a href="#экран-5">Как всё проходит</a><a href="#экран-6">Отзывы</a><a href="#экран-7">Команда</a><a href="#экран-8">Вопросы</a></nav>
-  <button class="бургер" type="button" aria-label="Меню"><svg class="ик" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <nav class="меню" id="меню" aria-label="Разделы"><a href="#экран-3">Программа</a><a href="#экран-5">Как всё проходит</a><a href="#экран-6">Отзывы</a><a href="#экран-7">Команда</a><a href="#экран-8">Вопросы</a><a class="кнопка кнопка--главная меню__кнопка" href="#экран-10">Рассчитать поездку для нашего класса<svg class="ик" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></nav>
+  <button class="бургер" type="button" aria-label="Открыть меню" aria-controls="меню" aria-expanded="false"><svg class="ик ик-меню" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="ик ик-закрыть" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
 </div></header>
 <section class="экран">
   <div class="обёртка"><div class="колонка">
@@ -1040,4 +1061,36 @@ body{margin:0}
   </ul>
 </div></footer>
 </div>
+<script>
+/* Мобильное меню: открыть / закрыть, страница под меню не прокручивается, переход к разделу, Esc. */
+(function () {
+  var кнопка = document.querySelector('.сб-1 .бургер'), меню = document.getElementById('меню'), корень = document.documentElement, тело = document.body, y = 0;
+  if (!кнопка || !меню) return;
+  var плавно = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function открыто() { return корень.classList.contains('меню-открыто'); }
+  function открыть() {
+    y = window.scrollY; корень.classList.add('меню-открыто');
+    тело.style.position = 'fixed'; тело.style.top = (-y) + 'px'; тело.style.left = '0'; тело.style.right = '0';
+    кнопка.setAttribute('aria-expanded', 'true'); кнопка.setAttribute('aria-label', 'Закрыть меню');
+  }
+  function закрыть(вернуть) {
+    корень.classList.remove('меню-открыто');
+    тело.style.position = ''; тело.style.top = ''; тело.style.left = ''; тело.style.right = '';
+    кнопка.setAttribute('aria-expanded', 'false'); кнопка.setAttribute('aria-label', 'Открыть меню');
+    if (вернуть !== false) window.scrollTo({ top: y, behavior: 'instant' });
+  }
+  кнопка.addEventListener('click', function () { открыто() ? закрыть() : открыть(); });
+  function перейти(e, адрес) {
+    e.preventDefault(); закрыть();
+    var цель = адрес === '#' ? null : document.querySelector(адрес);
+    if (цель) цель.scrollIntoView({ behavior: плавно ? 'smooth' : 'auto' }); else window.scrollTo({ top: 0, behavior: плавно ? 'smooth' : 'auto' });
+    history.replaceState(null, '', адрес === '#' ? location.pathname : адрес);
+  }
+  document.querySelector('.сб-1 .шапка').addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="#"]'); if (!a || !открыто()) return; перейти(e, a.getAttribute('href'));
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && открыто()) { закрыть(); кнопка.focus(); } });
+  matchMedia('(min-width: 1000px)').addEventListener('change', function (e) { if (e.matches && открыто()) закрыть(); });
+})();
+</script>
 </body></html>
