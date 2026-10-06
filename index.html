@@ -1,0 +1,1043 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Экспонат — общая сборка, проба типографической шкалы 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@500;600;700&family=PT+Sans:wght@400;700&display=swap&subset=cyrillic" rel="stylesheet">
+<style>
+/* общее для страницы — то же, что было у каждого экрана в html/body */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+
+/* ===== экран 1 — из экран-1-принят-2026-10-01 ===== */
+.сб-1 *,.сб-1 *::before,.сб-1 *::after{box-sizing:border-box}
+.сб-1{-webkit-text-size-adjust:100%}
+.сб-1{--заголовки:"Onest",system-ui,sans-serif;--текст:"PT Sans",system-ui,sans-serif;
+  --белый:#FFFFFF;--фон:#F6F7F8;--чернила:#16181B;--графит:#2B2E33;--мягкий:#565B63;--тихий:#7A8088;
+  --линия:#E2E4E7;--красный:#9C2A2F;--красный-ховер:#B03A3F;--поле:16px}
+.сб-1{margin:0;background:var(--фон);color:var(--чернила);font-family:var(--текст);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.сб-1 p,.сб-1 ul,.сб-1 h1{margin:0}
+.сб-1 a{color:inherit;text-decoration:none}
+.сб-1 .ик{width:20px;height:20px;flex:none}
+.сб-1 .обёртка{max-width:1360px;margin:0 auto;padding:0 var(--поле)}
+.сб-1 .шапка{background:var(--белый);border-bottom:1px solid var(--линия);position:relative;z-index:3}
+.сб-1 .шапка .обёртка{height:68px;display:flex;align-items:center;gap:32px}
+.сб-1 .знак{height:48px;width:auto;display:block}
+.сб-1 .меню{display:none}
+.сб-1 .бургер{margin-left:auto;width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--линия);border-radius:10px;
+  background:var(--белый);color:var(--графит)}
+.сб-1 .бургер .ик{width:22px;height:22px}
+.сб-1 .экран{position:relative;background:var(--фон);overflow:hidden}
+.сб-1 .кикер{font-family:var(--заголовки);font-weight:500;font-size:15px;line-height:1.35;color:var(--мягкий);
+  display:flex;align-items:center;gap:12px}
+.сб-1 .кикер::before{content:"";width:28px;height:2px;background:var(--красный);flex:none}
+.сб-1 h1{margin-top:14px;font-family:var(--заголовки);font-weight:700;font-size:42px;line-height:1.04;letter-spacing:-.03em;color:var(--чернила)}
+.сб-1 .колонка{padding-top:26px}
+.сб-1 .фото img{width:100%;height:100%;object-fit:cover;display:block}
+.сб-1 .кнопка,.сб-1 .связь{position:relative;z-index:1}
+.сб-1 .метка{position:absolute;right:12px;top:64px;font:13px/1.3 var(--текст);color:var(--графит);background:rgba(255,255,255,.85);
+  padding:5px 9px;border-radius:7px}
+.сб-1 .текст{margin-top:18px;font-size:18px;line-height:1.55;color:var(--графит)}
+.сб-1 .фраза{margin-top:14px;font-family:var(--заголовки);font-weight:600;font-size:20px;line-height:1.35;letter-spacing:-.01em;color:var(--чернила)}
+.сб-1 .кнопка{margin-top:24px;display:flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:16px 22px;
+  font-family:var(--заголовки);font-weight:600;font-size:17px;line-height:1.25;color:#fff;background:var(--красный);border-radius:12px;
+  box-shadow:0 10px 24px rgba(156,42,47,.22);transition:background .2s}
+.сб-1 .кнопка:hover{background:var(--красный-ховер)}
+.сб-1 .связь{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.сб-1 .связь a{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:9px 13px;font-size:15px;line-height:1.2;white-space:nowrap;
+  color:var(--графит);background:var(--белый);border:1px solid var(--линия);border-radius:10px}
+.сб-1 .связь a .ик{width:17px;height:17px;color:var(--тихий)}
+.сб-1 .связь a:hover{border-color:var(--тихий)}
+.сб-1 .факты{margin-top:30px;padding:6px 0 30px;list-style:none;border-top:1px solid var(--линия)}
+.сб-1 .факт{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--линия);
+  font-family:var(--заголовки);font-weight:500;font-size:16px;line-height:1.4;color:var(--графит)}
+.сб-1 .факт .ик{width:24px;height:24px;color:var(--красный)}
+.сб-1 .цена{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;padding-top:18px}
+.сб-1 .цена__число{font-family:var(--заголовки);font-weight:700;font-size:36px;line-height:1.05;letter-spacing:-.02em;color:var(--чернила)}
+.сб-1 .цена__подпись{font-size:17px;color:var(--мягкий)}
+@media (min-width:1000px){
+.сб-1{--поле:56px}
+.сб-1 .шапка .обёртка{height:84px;gap:48px}
+.сб-1 .знак{height:58px}
+.сб-1 .меню{display:flex;gap:30px;font-family:var(--заголовки);font-weight:500;font-size:15px;color:var(--графит)}
+.сб-1 .меню a:hover{color:var(--красный)}
+.сб-1 .бургер{display:none}
+.сб-1 .экран{min-height:660px}
+.сб-1 .фото{position:absolute;margin:0;top:0;right:0;bottom:0;width:62%;height:auto;z-index:auto}
+.сб-1 .фото img{object-position:90% 50%;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.35) 12%,#000 34%);
+    mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.35) 12%,#000 34%)}
+.сб-1 .фото::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(ellipse 210px 70px at 30px 327px,rgba(246,247,248,.7),rgba(246,247,248,0))}
+.сб-1 .фото::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(180deg,rgba(246,247,248,0),var(--фон))}
+.сб-1 .метка{top:auto;bottom:22px;right:24px}
+.сб-1 .колонка{max-width:560px;padding:64px 0 56px;display:flex;flex-direction:column}
+.сб-1 .колонка>*:not(.фото){position:relative;z-index:2}
+.сб-1 h1{font-size:clamp(60px,5.1vw,78px);margin-top:18px}
+.сб-1 .текст{margin-top:26px;font-size:19px}
+.сб-1 .фраза{font-size:22px;margin-top:16px}
+.сб-1 .кнопка{align-self:flex-start;margin-top:32px;padding:18px 28px}
+.сб-1 .связь{margin-top:16px;display:grid;grid-template-columns:repeat(2,max-content)}
+.сб-1 .связь a{background:rgba(255,255,255,.7)}
+.сб-1 .низ{position:relative;z-index:2;background:var(--белый);border-top:1px solid var(--линия)}
+.сб-1 .факты{margin:0;padding:24px 0 26px;border:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;align-items:center}
+.сб-1 .факт{border:0;padding:0 28px;border-left:1px solid var(--линия)}
+.сб-1 .факт:first-child{padding-left:0;border-left:0}
+.сб-1 .цена{display:grid;padding:0 0 0 32px;border-left:1px solid var(--линия);gap:0}
+.сб-1 .цена__число{font-size:40px}
+
+}
+@media (max-width:999px){
+.сб-1 .колонка{padding-bottom:22px}
+.сб-1 .колонка>*:not(.фото){position:relative;z-index:1}
+.сб-1 .фото{position:absolute;left:0;right:0;bottom:0;height:660px;margin:0;z-index:0;pointer-events:none}
+.сб-1 .фото img{width:100%;height:100%;object-fit:cover;object-position:80% 100%;display:block;
+    -webkit-mask-image:linear-gradient(180deg,transparent 0,rgba(0,0,0,.08) 18%,rgba(0,0,0,.22) 32%,rgba(0,0,0,.75) 48%,#000 58%,#000 84%,transparent 100%);
+    mask-image:linear-gradient(180deg,transparent 0,rgba(0,0,0,.08) 18%,rgba(0,0,0,.22) 32%,rgba(0,0,0,.75) 48%,#000 58%,#000 84%,transparent 100%)}
+.сб-1 .фото::before{content:"";position:absolute;left:0;right:0;bottom:0;height:200px;z-index:1;pointer-events:none;
+    background:linear-gradient(180deg,rgba(246,247,248,0) 0,rgba(246,247,248,.42) 34%,rgba(246,247,248,.6) 62%,rgba(246,247,248,.6) 100%)}
+.сб-1 .связь{margin-top:310px}
+.сб-1 .метка{top:52%}
+
+}
+
+
+/* ===== экран 2 — из экран-2-принят-2026-10-01 ===== */
+.сб-2 *,.сб-2 *::before,.сб-2 *::after{box-sizing:border-box}
+.сб-2{-webkit-text-size-adjust:100%}
+.сб-2{--заголовки:"Onest",system-ui,sans-serif;--текст:"PT Sans",system-ui,sans-serif;
+  --белый:#FFFFFF;--фон:#F6F7F8;--чернила:#16181B;--графит:#2B2E33;--мягкий:#565B63;--тихий:#7A8088;
+  --линия:#E2E4E7;--красный:#9C2A2F;--поле:56px}
+.сб-2{margin:0;background:var(--фон);color:var(--чернила);font-family:var(--текст);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.сб-2 h2,.сб-2 h3,.сб-2 p,.сб-2 ol{margin:0;padding:0}
+.сб-2 .обёртка{max-width:1360px;margin:0 auto;padding:0 var(--поле)}
+.сб-2 .ик{width:26px;height:26px;flex:none}
+.сб-2 .экран{background:var(--фон);padding:112px 0 128px}
+.сб-2 .шапка-экрана{max-width:780px}
+.сб-2 h2{font-family:var(--заголовки);font-weight:700;font-size:clamp(44px,3.9vw,58px);line-height:1.06;letter-spacing:-.03em;color:var(--чернила);text-wrap:balance}
+.сб-2 h2::before{content:"";display:block;width:28px;height:2px;background:var(--красный);margin-bottom:26px}
+.сб-2 .подзаголовок{margin-top:22px;font-size:21px;line-height:1.5;color:var(--графит);max-width:720px}
+.сб-2 .дни{list-style:none;margin-top:76px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:auto auto auto;gap:0 24px;position:relative;
+  width:calc(50% + min(50vw - 56px,680px))}
+.сб-2 .дни::before{content:"";position:absolute;left:0;right:0;top:31px;height:1px;background:var(--линия)}
+.сб-2 .шаг{position:relative;display:grid;grid-row:span 3;grid-template-rows:subgrid;align-content:start}
+.сб-2 .шаг__метка{display:flex;align-items:center;gap:14px;position:relative}
+.сб-2 .шаг__знак{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;flex:none;
+  background:var(--фон);border:1px solid var(--линия);color:var(--графит)}
+.сб-2 .шаг__знак .ик{width:28px;height:28px}
+.сб-2 .шаг__номер{font-family:var(--заголовки);font-weight:600;font-size:15px;letter-spacing:.04em;color:var(--красный);
+  background:var(--фон);padding:0 8px 0 0}
+.сб-2 .шаг:first-child .шаг__знак{border-color:var(--красный);color:var(--красный)}
+.сб-2 h3{margin-top:30px;font-family:var(--заголовки);font-weight:600;font-size:24px;line-height:1.22;letter-spacing:-.015em;color:var(--чернила);text-wrap:balance}
+.сб-2 h3 .вторая{display:block}
+.сб-2 .шаг p{margin-top:14px;font-size:19px;line-height:1.5;color:var(--графит)}
+@media (max-width:999px){
+.сб-2{--поле:16px}
+.сб-2 .экран{padding:72px 0 80px}
+.сб-2 h2{font-size:36px;line-height:1.08}
+.сб-2 h2::before{margin-bottom:20px}
+.сб-2 .подзаголовок{margin-top:16px;font-size:18px;line-height:1.55}
+.сб-2 .дни{display:block;width:auto;margin:48px 0 0}
+.сб-2 .дни::before{display:none}
+.сб-2 .шаг{display:grid;grid-template-columns:52px minmax(0,1fr);grid-template-rows:auto;column-gap:18px;padding-bottom:36px}
+.сб-2 .шаг:last-child{padding-bottom:0}
+.сб-2 .шаг::after{content:"";position:absolute;left:26px;top:60px;bottom:8px;width:1px;background:var(--линия)}
+.сб-2 .шаг:last-child::after{display:none}
+.сб-2 .шаг__метка{display:contents}
+.сб-2 .шаг__знак{grid-column:1;grid-row:1/span 3;align-self:start;width:52px;height:52px}
+.сб-2 .шаг__знак .ик{width:24px;height:24px}
+.сб-2 .шаг__номер{grid-column:2;grid-row:1;padding:4px 0 0;font-size:14px}
+.сб-2 h3{grid-column:2;grid-row:2;margin-top:4px;font-size:22px;line-height:1.25}
+.сб-2 h3 .вторая{display:inline}
+.сб-2 .шаг p{grid-column:2;grid-row:3;margin-top:8px;font-size:20px;line-height:1.5}
+
+}
+
+
+/* ===== экран 3 — из экран-3-принят-2026-10-01 ===== */
+.сб-3 *,.сб-3 *::before,.сб-3 *::after{box-sizing:border-box}
+.сб-3{-webkit-text-size-adjust:100%}
+.сб-3{--заголовки:"Onest",system-ui,sans-serif;--текст:"PT Sans",system-ui,sans-serif;
+  --белый:#FFFFFF;--фон:#F6F7F8;--чернила:#16181B;--графит:#2B2E33;--мягкий:#565B63;--тихий:#7A8088;
+  --линия:#E2E4E7;--красный:#9C2A2F;--красный-ховер:#B03A3F;--поле:56px}
+.сб-3{margin:0;background:var(--белый);color:var(--чернила);font-family:var(--текст);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.сб-3 h2,.сб-3 h3,.сб-3 p,.сб-3 ol,.сб-3 ul{margin:0;padding:0}
+.сб-3 a{color:inherit;text-decoration:none}
+.сб-3 .обёртка{max-width:1360px;margin:0 auto;padding:0 var(--поле)}
+.сб-3 .ик{width:20px;height:20px;flex:none}
+.сб-3 .экран{background:var(--белый);padding:112px 0 120px}
+.сб-3 .вводка{max-width:800px}
+.сб-3 .кикер{font-family:var(--заголовки);font-weight:500;font-size:15px;line-height:1.35;color:var(--мягкий);display:flex;align-items:center;gap:12px}
+.сб-3 .кикер::before{content:"";width:28px;height:2px;background:var(--красный);flex:none}
+.сб-3 h2{margin-top:20px;font-family:var(--заголовки);font-weight:700;font-size:clamp(44px,3.9vw,58px);line-height:1.06;letter-spacing:-.03em;color:var(--чернила);text-wrap:balance}
+.сб-3 .подзаголовок{margin-top:22px;font-size:21px;line-height:1.5;color:var(--графит);max-width:720px}
+.сб-3 .дни{list-style:none;margin-top:72px;border-top:1px solid var(--линия)}
+.сб-3 .день{display:grid;grid-template-columns:300px minmax(0,1fr);gap:0 40px;padding:44px 0 48px;border-bottom:1px solid var(--линия);position:relative}
+.сб-3 .день__шапка{position:relative;padding-left:36px}
+.сб-3 .день__шапка::before{content:"";position:absolute;left:0;top:6px;width:13px;height:13px;border-radius:50%;border:2px solid var(--красный);background:var(--белый)}
+.сб-3 .день:first-child .день__шапка::before{background:var(--красный)}
+.сб-3 .день::after{content:"";position:absolute;left:6px;top:70px;bottom:-38px;width:1px;background:var(--линия)}
+.сб-3 .день:last-child::after{display:none}
+.сб-3 .день__номер{font-family:var(--заголовки);font-weight:600;font-size:15px;line-height:1.6;letter-spacing:.02em;color:var(--красный)}
+.сб-3 h3{margin-top:8px;font-family:var(--заголовки);font-weight:700;font-size:28px;line-height:1.12;letter-spacing:-.025em;color:var(--чернила)}
+.сб-3 .метка{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:6px 12px;border:1px solid var(--линия);border-radius:999px;
+  font-family:var(--заголовки);font-weight:500;font-size:14px;line-height:1.3;color:var(--графит);background:var(--фон)}
+.сб-3 .метка::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--красный)}
+.сб-3 .день__основное{font-size:22px;line-height:1.55;color:var(--чернила);max-width:840px}
+.сб-3 .варианты{list-style:none;margin-top:24px;max-width:840px}
+.сб-3 .вариант{display:grid;grid-template-columns:210px minmax(0,1fr);gap:0 24px;padding:16px 0;border-top:1px dashed var(--линия);font-size:21px;line-height:1.5;color:var(--графит)}
+.сб-3 .вариант__ярлык{font-family:var(--заголовки);font-weight:600;font-size:17px;line-height:1.75;color:var(--чернила)}
+.сб-3 .итог{display:grid;grid-template-columns:300px minmax(0,1fr);gap:0 40px;margin-top:56px}
+.сб-3 .итог__текст{grid-column:2;max-width:840px;font-size:20px;line-height:1.55;color:var(--чернила);padding-left:24px;border-left:2px solid var(--красный)}
+.сб-3 .кнопка{grid-column:2;justify-self:start;margin-top:36px;display:inline-flex;align-items:center;gap:10px;min-height:58px;padding:18px 28px;
+  font-family:var(--заголовки);font-weight:600;font-size:17px;line-height:1.25;color:#fff;background:var(--красный);border-radius:12px;
+  box-shadow:0 10px 24px rgba(156,42,47,.22);transition:background .2s}
+.сб-3 .кнопка:hover{background:var(--красный-ховер)}
+@media (max-width:999px){
+.сб-3{--поле:16px}
+.сб-3 .экран{padding:56px 0 64px}
+.сб-3 .кикер{font-size:14px}
+.сб-3 h2{margin-top:16px;font-size:36px;line-height:1.08}
+.сб-3 .подзаголовок{margin-top:16px;font-size:18px;line-height:1.55}
+.сб-3 .дни{margin-top:32px}
+.сб-3 .день{display:block;padding:26px 0 28px 30px}
+.сб-3 .день__шапка{padding-left:0}
+.сб-3 .день__шапка::before{left:-30px;top:5px}
+.сб-3 .день::after{left:6px;top:50px;bottom:-25px}
+.сб-3 h3{margin-top:4px;font-size:24px;line-height:1.15}
+.сб-3 .метка{margin-top:12px}
+.сб-3 .день__основное{margin-top:12px;font-size:20px;line-height:1.5}
+.сб-3 .варианты{margin-top:12px}
+.сб-3 .вариант{display:block;padding:10px 0;font-size:19px;line-height:1.5}
+.сб-3 .вариант__ярлык{display:block;font-size:16px;line-height:1.5;margin-bottom:2px}
+.сб-3 .итог{display:block;margin-top:32px}
+.сб-3 .итог__текст{font-size:19px;line-height:1.55;padding-left:18px}
+.сб-3 .кнопка{display:flex;justify-content:center;width:100%;margin-top:24px;padding:16px 20px;text-align:left}
+
+}
+
+
+/* ===== экран 4 — из экран-4-принят-2026-10-01 ===== */
+.сб-4 *,.сб-4 *::before,.сб-4 *::after{box-sizing:border-box}
+.сб-4{-webkit-text-size-adjust:100%}
+.сб-4{--заголовки:"Onest",system-ui,sans-serif;--текст:"PT Sans",system-ui,sans-serif;
+  --белый:#FFFFFF;--фон:#F6F7F8;--чернила:#16181B;--графит:#2B2E33;--мягкий:#565B63;--тихий:#7A8088;
+  --линия:#E2E4E7;--красный:#9C2A2F;--поле:56px}
+.сб-4{margin:0;background:var(--фон);color:var(--чернила);font-family:var(--текст);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.сб-4 h2,.сб-4 h3,.сб-4 p,.сб-4 ul{margin:0;padding:0}
+.сб-4 .обёртка{max-width:1360px;margin:0 auto;padding:0 var(--поле)}
+.сб-4 .экран{background:var(--фон);padding:112px 0 120px}
+.сб-4 .вводка{max-width:800px}
+.сб-4 .кикер{font-family:var(--заголовки);font-weight:500;font-size:15px;line-height:1.35;color:var(--мягкий);display:flex;align-items:center;gap:12px}
+.сб-4 .кикер::before{content:"";width:28px;height:2px;background:var(--красный);flex:none}
+.сб-4 h2{margin-top:20px;font-family:var(--заголовки);font-weight:700;font-size:clamp(44px,3.9vw,58px);line-height:1.06;letter-spacing:-.03em;color:var(--чернила);text-wrap:balance}
+.сб-4 .подзаголовок{margin-top:22px;font-size:21px;line-height:1.5;color:var(--графит);max-width:720px}
+.сб-4 .тело{display:grid;grid-template-columns:488px minmax(0,1fr);gap:0 40px;margin-top:48px;align-items:stretch}
+.сб-4 .тело .подзаголовок{margin-top:0}
+.сб-4 .пункты{margin-top:36px}
+.сб-4 .тело .пункт p{max-width:none}
+.сб-4 .тело{align-items:start}
+.сб-4 .тело .фото{min-height:0;aspect-ratio:2/3}
+.сб-4 .фото{position:relative;min-height:100%;border-radius:20px;overflow:hidden;
+  background:linear-gradient(160deg,#E7E9EC 0%,#DADDE1 100%)}
+.сб-4 .фото__метка{position:absolute;left:28px;bottom:26px;right:28px;display:flex;flex-direction:column;gap:6px;
+  font-family:var(--заголовки);font-size:14px;line-height:1.4;color:var(--тихий)}
+.сб-4 .фото__метка b{font-weight:600;color:var(--мягкий)}
+.сб-4 .на-телефоне{display:none}
+.сб-4 .фото__рамка{position:absolute;inset:50% auto auto 50%;transform:translate(-50%,-60%);width:64px;height:64px;color:#B9BEC4}
+.сб-4 .пункты{list-style:none;border-top:1px solid var(--линия)}
+.сб-4 .пункт{padding:28px 0 30px;border-bottom:1px solid var(--линия)}
+.сб-4 h3{font-family:var(--заголовки);font-weight:700;font-size:24px;line-height:1.2;letter-spacing:-.02em;color:var(--чернила)}
+.сб-4 .пункт p{margin-top:8px;font-size:20px;line-height:1.55;color:var(--графит);max-width:640px}
+.сб-4 .пункт--если{border-bottom:0;margin-top:28px;padding:4px 0 4px 24px;border-left:2px solid var(--красный)}
+@media (max-width:999px){
+.сб-4{--поле:16px}
+.сб-4 .экран{padding:56px 0 64px}
+.сб-4 .кикер{font-size:14px}
+.сб-4 h2{margin-top:16px;font-size:36px;line-height:1.08}
+.сб-4 .тело{display:flex;flex-direction:column;margin-top:16px}
+.сб-4 .тело>div:last-child{display:contents}
+.сб-4 .тело .подзаголовок{order:1;font-size:18px;line-height:1.55}
+.сб-4 .тело .фото{order:2;margin-top:28px;width:100%;aspect-ratio:4/5;border-radius:16px}
+.сб-4 .фото__метка{left:20px;right:20px;bottom:18px;font-size:13px}
+.сб-4 .пункты{order:3;margin-top:28px}
+.сб-4 .пункт{padding:22px 0 24px}
+.сб-4 h3{font-size:22px;line-height:1.2}
+.сб-4 .пункт p{margin-top:6px;font-size:19px;line-height:1.5}
+.сб-4 .на-компьютере{display:none}
+.сб-4 .на-телефоне{display:inline}
+.сб-4 .пункт--если{order:4;margin-top:24px;padding:2px 0 2px 18px}
+
+}
+
+
+/* ===== экран 5 — из экран-5-принят-2026-10-01 ===== */
+.сб-5 *,.сб-5 *::before,.сб-5 *::after{box-sizing:border-box}
+.сб-5{-webkit-text-size-adjust:100%}
+.сб-5{--заголовки:"Onest",system-ui,sans-serif;--текст:"PT Sans",system-ui,sans-serif;
+  --белый:#FFFFFF;--фон:#F6F7F8;--чернила:#16181B;--графит:#2B2E33;--мягкий:#565B63;--тихий:#7A8088;
+  --линия:#E2E4E7;--красный:#9C2A2F;--красный-ховер:#B03A3F;--поле:56px}
+.сб-5{margin:0;background:var(--белый);color:var(--чернила);font-family:var(--текст);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.сб-5 h2,.сб-5 h3,.сб-5 p,.сб-5 ol{margin:0;padding:0}
+.сб-5 a{color:inherit;text-decoration:none}
+.сб-5 .обёртка{max-width:1360px;margin:0 auto;padding:0 var(--поле)}
+.сб-5 .ик{width:20px;height:20px;flex:none}
+.сб-5 .экран{background:var(--белый);padding:112px 0 120px}
+.сб-5 .вводка{max-width:800px}
+.сб-5 .кикер{font-family:var(--заголовки);font-weight:500;font-size:15px;line-height:1.35;color:var(--мягкий);display:flex;align-items:center;gap:12px}
+.сб-5 .кикер::before{content:"";width:28px;height:2px;background:var(--красный);flex:none}
+.сб-5 h2{margin-top:20px;font-family:var(--заголовки);font-weight:700;font-size:clamp(44px,3.9vw,58px);line-height:1.06;letter-spacing:-.03em;color:var(--чернила);text-wrap:balance}
+.сб-5 .шаги{list-style:none;margin-top:64px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:12px}
+.сб-5 .шаг{grid-column:span 4;border-top:1px solid #C9CDD2;padding-top:18px}
+.сб-5 .шаг:nth-child(1){grid-column:1 / span 4;border-top:2px solid var(--красный)}
+.сб-5 .шаг:nth-child(2){grid-column:3 / span 4}
+.сб-5 .шаг:nth-child(3){grid-column:5 / span 4}
+.сб-5 .шаг:nth-child(4){grid-column:7 / span 4}
+.сб-5 .шаг:nth-child(5){grid-column:9 / span 4}
+.сб-5 h3{font-family:var(--заголовки);font-weight:700;font-size:24px;line-height:1.2;letter-spacing:-.02em;color:var(--чернила)}
+.сб-5 .шаг p{margin-top:8px;font-size:19px;line-height:1.5;color:var(--графит)}
+.сб-5 .финал{margin-top:56px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 56px;align-items:center;
+  padding:44px 48px;background:var(--фон);border-radius:20px}
+.сб-5 .финал h3{font-size:clamp(30px,2.6vw,38px);line-height:1.1;letter-spacing:-.025em}
+.сб-5 .финал p{margin-top:10px;font-size:20px;line-height:1.5;color:var(--графит)}
+.сб-5 .кнопка{display:inline-flex;align-items:center;gap:10px;min-height:58px;padding:18px 28px;
+  font-family:var(--заголовки);font-weight:600;font-size:17px;line-height:1.25;color:#fff;background:var(--красный);border-radius:12px;
+  box-shadow:0 10px 24px rgba(156,42,47,.22);transition:background .2s}
+.сб-5 .кнопка:hover{background:var(--красный-ховер)}
+@media (max-width:999px){
+.сб-5{--поле:16px}
+.сб-5 .экран{padding:56px 0 64px}
+.сб-5 .кикер{font-size:14px}
+.сб-5 h2{margin-top:16px;font-size:36px;line-height:1.08}
+.сб-5 .шаги{display:flex;flex-direction:column;row-gap:28px;margin-top:36px}
+.сб-5 .шаг,.сб-5 .шаг:nth-child(1){border-top:0;padding-top:18px;position:relative}
+.сб-5 .шаг::before{content:"";position:absolute;top:0;left:var(--сдвиг,0);width:40%;height:1px;background:#C9CDD2}
+.сб-5 .шаг:nth-child(1)::before{height:2px;background:var(--красный)}
+.сб-5 .шаг:nth-child(2){--сдвиг:15%}
+.сб-5 .шаг:nth-child(3){--сдвиг:30%}
+.сб-5 .шаг:nth-child(4){--сдвиг:45%}
+.сб-5 .шаг:nth-child(5){--сдвиг:60%}
+.сб-5 h3{font-size:22px}
+.сб-5 .шаг p{margin-top:6px;font-size:18px;line-height:1.5}
+.сб-5 .финал{display:block;margin-top:56px;padding:28px 22px 24px;border-radius:16px}
+.сб-5 .финал h3{font-size:28px}
+.сб-5 .финал p{font-size:18px}
+.сб-5 .кнопка{display:flex;justify-content:center;width:100%;margin-top:24px;padding:16px 20px;text-align:left}
+
+}
+
+
+/* ===== экран 6 — из экран-6-принят-2026-10-01 ===== */
+.сб-6 *,.сб-6 *::before,.сб-6 *::after{box-sizing:border-box}
+.сб-6{-webkit-text-size-adjust:100%}
+.сб-6{--заголовки:"Onest",system-ui,sans-serif;--текст:"PT Sans",system-ui,sans-serif;
+  --белый:#FFFFFF;--фон:#F6F7F8;--чернила:#16181B;--графит:#2B2E33;--мягкий:#565B63;--тихий:#7A8088;
+  --линия:#E2E4E7;--красный:#9C2A2F;--поле:56px}
+.сб-6{margin:0;background:var(--фон);color:var(--чернила);font-family:var(--текст);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.сб-6 h2,.сб-6 p,.сб-6 figure,.сб-6 blockquote{margin:0;padding:0}
+.сб-6 .обёртка{max-width:1360px;margin:0 auto;padding:0 var(--поле)}
+.сб-6 .экран{background:var(--фон);padding:112px 0 120px}
+.сб-6 .вводка{max-width:800px}
+.сб-6 .кикер{font-family:var(--заголовки);font-weight:500;font-size:15px;line-height:1.35;color:var(--мягкий);display:flex;align-items:center;gap:12px}
+.сб-6 .кикер::before{content:"";width:28px;height:2px;background:var(--красный);flex:none}
+.сб-6 h2{margin-top:20px;font-family:var(--заголовки);font-weight:700;font-size:clamp(44px,3.9vw,58px);line-height:1.06;letter-spacing:-.03em;color:var(--чернила);text-wrap:balance}
+.сб-6 .отзывы{margin-top:64px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.сб-6 .отзыв{min-width:0}
+.сб-6 .автор{font-family:var(--заголовки);font-weight:500;font-size:17px;line-height:1.35;color:var(--мягкий)}
+.сб-6 .автор b{font-weight:700;color:var(--чернила)}
+.сб-6 blockquote{margin-top:16px;color:var(--графит)}
+.сб-6 .отзыв--ведущий{grid-column:1 / span 9}
+.сб-6 .отзыв--ведущий .автор{font-size:19px}
+.сб-6 .отзыв--ведущий blockquote{font-size:25px;line-height:1.5;color:var(--чернила);max-width:880px}
+.сб-6 .пара{grid-column:1 / -1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;
+  margin-top:64px;padding-top:48px;border-top:1px solid var(--линия)}
+.сб-6 .пара .отзыв:first-child{grid-column:1 / span 7}
+.сб-6 .пара .отзыв:last-child{grid-column:9 / span 4}
+.сб-6 .пара blockquote{font-size:20px;line-height:1.55}
+.сб-6 .строка{display:block}
+.сб-6 .строка+.строка{margin-top:8px}
+.сб-6 .целиком{white-space:nowrap}
+@media (max-width:999px){
+.сб-6{--поле:16px}
+.сб-6 .экран{padding:56px 0 64px}
+.сб-6 .кикер{font-size:14px}
+.сб-6 h2{margin-top:16px;font-size:36px;line-height:1.08}
+.сб-6 .отзывы,.сб-6 .пара{display:block}
+.сб-6 .отзывы{margin-top:36px}
+.сб-6 .пара{margin-top:40px;padding-top:36px}
+.сб-6 .пара .отзыв+.отзыв{margin-top:40px;padding-top:36px;border-top:1px solid var(--линия)}
+.сб-6 .автор,.сб-6 .отзыв--ведущий .автор{font-size:17px}
+.сб-6 blockquote{margin-top:12px}
+.сб-6 .отзыв--ведущий blockquote,.сб-6 .пара blockquote{font-size:19px;line-height:1.5;color:var(--графит);max-width:none}
+
+}
+
+
+/* ===== экран 7 — из экран-7-принят-2026-10-01 ===== */
+.сб-7 *,.сб-7 *::before,.сб-7 *::after{box-sizing:border-box}
+.сб-7{-webkit-text-size-adjust:100%}
+.сб-7{--заголовки:"Onest",system-ui,sans-serif;--текст:"PT Sans",system-ui,sans-serif;
+  --белый:#FFFFFF;--фон:#F6F7F8;--чернила:#16181B;--графит:#2B2E33;--мягкий:#565B63;--тихий:#7A8088;
+  --линия:#E2E4E7;--красный:#9C2A2F;--поле:56px}
+.сб-7{margin:0;background:var(--белый);color:var(--чернила);font-family:var(--текст);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.сб-7 h2,.сб-7 h3,.сб-7 p,.сб-7 ul{margin:0;padding:0}
+.сб-7 .обёртка{max-width:1360px;margin:0 auto;padding:0 var(--поле)}
+.сб-7 .экран{background:var(--белый);padding:112px 0 120px}
+.сб-7 .раскладка{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:0 72px;align-items:start}
+.сб-7 .кикер{font-family:var(--заголовки);font-weight:500;font-size:15px;line-height:1.35;color:var(--мягкий);display:flex;align-items:center;gap:12px}
+.сб-7 .кикер::before{content:"";width:28px;height:2px;background:var(--красный);flex:none}
+.сб-7 h2{margin-top:20px;font-family:var(--заголовки);font-weight:700;font-size:clamp(44px,3.9vw,58px);line-height:1.06;letter-spacing:-.03em;color:var(--чернила);text-wrap:balance}
+.сб-7 .люди{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px}
+.сб-7 .портрет{position:relative;aspect-ratio:1/1;overflow:hidden;border-radius:16px;background:var(--фон)}
+.сб-7 .портрет img{position:absolute;display:block}
+.сб-7 .портрет--ольга img{width:256%;left:-76.1667%;top:-14.8333%}
+.сб-7 .портрет--анна img{inset:0;width:100%;height:100%;object-fit:cover}
+.сб-7 h3{margin-top:24px;font-family:var(--заголовки);font-weight:700;font-size:26px;line-height:1.15;letter-spacing:-.02em;color:var(--чернила)}
+.сб-7 .роль{margin-top:8px;font-family:var(--заголовки);font-weight:600;font-size:16px;line-height:1.4;color:var(--красный)}
+.сб-7 .о-человеке{margin-top:12px;font-size:19px;line-height:1.55;color:var(--графит)}
+@media (max-width:999px){
+.сб-7{--поле:16px}
+.сб-7 .экран{padding:56px 0 64px}
+.сб-7 .раскладка{display:block}
+.сб-7 .кикер{font-size:14px}
+.сб-7 h2{margin-top:16px;font-size:36px;line-height:1.08}
+.сб-7 .люди{display:flex;flex-direction:column;gap:32px;margin-top:32px}
+.сб-7 .человек{display:grid;grid-template-columns:136px minmax(0,1fr);column-gap:18px;align-items:start}
+.сб-7 .портрет{grid-column:1;grid-row:1 / span 3;border-radius:14px}
+.сб-7 .человек h3,.сб-7 .роль,.сб-7 .о-человеке{grid-column:2}
+.сб-7 h3{margin-top:2px;font-size:22px;line-height:1.15}
+.сб-7 .роль{margin-top:6px;font-size:15px}
+.сб-7 .о-человеке{margin-top:8px;font-size:18px;line-height:1.5}
+
+}
+
+
+/* ===== экран 8 — из экран-8-принят-2026-10-01 ===== */
+.сб-8 *,.сб-8 *::before,.сб-8 *::after{box-sizing:border-box}
+.сб-8{-webkit-text-size-adjust:100%}
+.сб-8{--заголовки:"Onest",system-ui,sans-serif;--текст:"PT Sans",system-ui,sans-serif;
+  --белый:#FFFFFF;--фон:#F6F7F8;--чернила:#16181B;--графит:#2B2E33;--мягкий:#565B63;--тихий:#7A8088;
+  --линия:#E2E4E7;--красный:#9C2A2F;--поле:56px}
+.сб-8{margin:0;background:var(--фон);color:var(--чернила);font-family:var(--текст);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.сб-8 h2,.сб-8 h3,.сб-8 p,.сб-8 dl,.сб-8 dt,.сб-8 dd{margin:0;padding:0}
+.сб-8 .обёртка{max-width:1360px;margin:0 auto;padding:0 var(--поле)}
+.сб-8 .экран{background:var(--фон);padding:112px 0 120px}
+.сб-8 .вводка{max-width:800px}
+.сб-8 .кикер{font-family:var(--заголовки);font-weight:500;font-size:15px;line-height:1.35;color:var(--мягкий);display:flex;align-items:center;gap:12px}
+.сб-8 .кикер::before{content:"";width:28px;height:2px;background:var(--красный);flex:none}
+.сб-8 h2{margin-top:20px;font-family:var(--заголовки);font-weight:700;font-size:clamp(44px,3.9vw,58px);line-height:1.06;letter-spacing:-.03em;color:var(--чернила);text-wrap:balance}
+.сб-8 .вопросы{margin-top:64px;border-top:1px solid var(--линия)}
+.сб-8 .пара{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:0 72px;padding:32px 0 34px;border-bottom:1px solid var(--линия)}
+.сб-8 .пара dt{font-family:var(--заголовки);font-weight:600;font-size:22px;line-height:1.3;letter-spacing:-.01em;color:var(--чернила)}
+.сб-8 .пара dd{font-size:20px;line-height:1.55;color:var(--графит);max-width:680px}
+@media (max-width:999px){
+.сб-8{--поле:16px}
+.сб-8 .экран{padding:56px 0 64px}
+.сб-8 .кикер{font-size:14px}
+.сб-8 h2{margin-top:16px;font-size:36px;line-height:1.08}
+.сб-8 .вопросы{margin-top:32px}
+.сб-8 .пара{display:block;padding:24px 0 26px}
+.сб-8 .пара dt{font-size:20px;line-height:1.3}
+.сб-8 .пара dd{margin-top:10px;font-size:18px;line-height:1.5;max-width:none}
+
+}
+
+
+/* ===== экран 9 — из экран-9-принят-2026-10-01 ===== */
+.сб-9 *,.сб-9 *::before,.сб-9 *::after{box-sizing:border-box}
+.сб-9{-webkit-text-size-adjust:100%}
+.сб-9{--заголовки:"Onest",system-ui,sans-serif;--текст:"PT Sans",system-ui,sans-serif;
+  --белый:#FFFFFF;--фон:#F6F7F8;--чернила:#16181B;--графит:#2B2E33;--мягкий:#565B63;--тихий:#7A8088;
+  --линия:#E2E4E7;--красный:#9C2A2F;--поле:56px}
+.сб-9{margin:0;background:var(--белый);color:var(--чернила);font-family:var(--текст);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.сб-9 h2,.сб-9 h3,.сб-9 p,.сб-9 ul{margin:0;padding:0}
+.сб-9 .обёртка{max-width:1360px;margin:0 auto;padding:0 var(--поле)}
+.сб-9 .экран{background:var(--белый);padding:112px 0 120px}
+.сб-9 .верх{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:0 72px;align-items:end}
+.сб-9 .кикер{font-family:var(--заголовки);font-weight:500;font-size:15px;line-height:1.35;color:var(--мягкий);display:flex;align-items:center;gap:12px}
+.сб-9 .кикер::before{content:"";width:28px;height:2px;background:var(--красный);flex:none}
+.сб-9 h2{margin-top:20px;font-family:var(--заголовки);font-weight:700;font-size:clamp(44px,3.9vw,58px);line-height:1.06;letter-spacing:-.03em;color:var(--чернила);text-wrap:balance}
+.сб-9 .цена{font-size:22px;line-height:1.5;color:var(--графит)}
+.сб-9 .сумма{display:block;margin-bottom:10px;font-family:var(--заголовки);font-weight:700;font-size:clamp(56px,5.2vw,76px);line-height:1;letter-spacing:-.035em;color:var(--чернила);white-space:nowrap}
+.сб-9 .сумма .за{font-size:.42em;font-weight:600;letter-spacing:-.01em;color:var(--графит)}
+.сб-9 .условия{list-style:none;margin-top:72px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--линия)}
+.сб-9 .условие{padding:32px 40px 0;border-left:1px solid var(--линия)}
+.сб-9 .условие:first-child{padding-left:0;border-left:0}
+.сб-9 .условие:last-child{padding-right:0}
+.сб-9 h3{font-family:var(--заголовки);font-weight:600;font-size:22px;line-height:1.3;letter-spacing:-.01em;color:var(--чернила)}
+.сб-9 .условие p{margin-top:10px;font-size:19px;line-height:1.55;color:var(--графит)}
+.сб-9 .целиком{white-space:nowrap}
+@media (max-width:999px){
+.сб-9{--поле:16px}
+.сб-9 .экран{padding:56px 0 64px}
+.сб-9 .верх{display:block}
+.сб-9 .кикер{font-size:14px}
+.сб-9 h2{margin-top:16px;font-size:36px;line-height:1.08}
+.сб-9 .цена{margin-top:28px;font-size:19px;line-height:1.5}
+.сб-9 .сумма{margin-bottom:8px;font-size:clamp(32px,10.7vw,42px);letter-spacing:-.03em}
+.сб-9 .условия{display:block;margin-top:36px}
+.сб-9 .условие,.сб-9 .условие:first-child,.сб-9 .условие:last-child{padding:20px 0 22px;border-left:0;border-bottom:1px solid var(--линия)}
+.сб-9 h3{font-size:20px;line-height:1.3}
+.сб-9 .условие p{margin-top:8px;font-size:18px;line-height:1.5}
+
+}
+
+
+/* ===== экран 10 — из экран-10-принят-2026-10-01 ===== */
+.сб-10 *,.сб-10 *::before,.сб-10 *::after{box-sizing:border-box}
+.сб-10{-webkit-text-size-adjust:100%}
+.сб-10{--заголовки:"Onest",system-ui,sans-serif;--текст:"PT Sans",system-ui,sans-serif;
+  --белый:#FFFFFF;--фон:#F6F7F8;--чернила:#16181B;--графит:#2B2E33;--мягкий:#565B63;--тихий:#7A8088;
+  --линия:#E2E4E7;--поле-рамка:#CDD1D6;--красный:#9C2A2F;--красный-ховер:#B03A3F;--поле:56px}
+.сб-10{margin:0;background:var(--фон);color:var(--чернила);font-family:var(--текст);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.сб-10 h2,.сб-10 h3,.сб-10 p,.сб-10 ul{margin:0;padding:0}
+.сб-10 a{color:inherit;text-decoration:none}
+.сб-10 .обёртка{max-width:1360px;margin:0 auto;padding:0 var(--поле)}
+.сб-10 .ик{width:20px;height:20px;flex:none}
+.сб-10 .экран{background:var(--фон);padding:112px 0 120px}
+.сб-10 .раскладка{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:0 80px;align-items:start}
+.сб-10 .кикер{font-family:var(--заголовки);font-weight:500;font-size:15px;line-height:1.35;color:var(--мягкий);display:flex;align-items:center;gap:12px}
+.сб-10 .кикер::before{content:"";width:28px;height:2px;background:var(--красный);flex:none}
+.сб-10 h2{margin-top:20px;font-family:var(--заголовки);font-weight:700;font-size:clamp(44px,3.9vw,58px);line-height:1.06;letter-spacing:-.03em;color:var(--чернила);text-wrap:balance;max-width:760px}
+.сб-10 .подзаголовок{margin-top:22px;font-size:21px;line-height:1.5;color:var(--графит);max-width:640px}
+.сб-10 .форма{margin-top:44px;max-width:720px}
+.сб-10 .поля{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.сб-10 .поле{display:flex;flex-direction:column;gap:8px}
+.сб-10 .поле span{font-family:var(--заголовки);font-weight:600;font-size:16px;line-height:1.3;color:var(--чернила)}
+.сб-10 .поле input{height:58px;padding:0 18px;border:1px solid var(--поле-рамка);border-radius:12px;background:var(--белый);
+  font:400 18px/1.3 var(--текст);color:var(--чернила)}
+.сб-10 .поле input:focus{outline:2px solid var(--красный);outline-offset:1px;border-color:var(--красный)}
+.сб-10 .кнопка{margin-top:24px;display:inline-flex;align-items:center;gap:10px;min-height:62px;padding:19px 30px;border:0;cursor:pointer;
+  font-family:var(--заголовки);font-weight:600;font-size:18px;line-height:1.25;color:#fff;background:var(--красный);border-radius:12px;
+  box-shadow:0 10px 24px rgba(156,42,47,.22);transition:background .2s}
+.сб-10 .кнопка:hover{background:var(--красный-ховер)}
+.сб-10 .юр-зона{margin-top:20px;min-height:48px}
+.сб-10 .контакты{margin-top:38px;padding-left:40px;border-left:1px solid var(--линия)}
+.сб-10 .контакты h3{font-family:var(--заголовки);font-weight:600;font-size:18px;line-height:1.35;color:var(--мягкий)}
+.сб-10 .анна{margin-top:24px}
+.сб-10 .анна__имя{font-family:var(--заголовки);font-weight:700;font-size:21px;line-height:1.25;color:var(--чернила)}
+.сб-10 .анна__роль{margin-top:4px;font-size:17px;line-height:1.45;color:var(--мягкий)}
+.сб-10 .анна__тел{display:inline-block;margin-top:10px;font-family:var(--заголовки);font-weight:600;font-size:20px;line-height:1.3;color:var(--чернила)}
+.сб-10 .каналы{list-style:none;margin-top:28px;padding-top:24px;border-top:1px solid var(--линия);display:flex;flex-direction:column;gap:12px;font-size:18px;line-height:1.45}
+.сб-10 .каналы a{color:var(--красный);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.сб-10 .каналы a:hover{color:var(--красный-ховер)}
+.сб-10 .каналы .почта{color:var(--графит)}
+.сб-10 .каналы .почта a{color:var(--красный)}
+.сб-10 .подвал{background:var(--белый);border-top:1px solid var(--линия);padding:28px 0 32px}
+.сб-10 .реквизиты{list-style:none;display:flex;flex-wrap:wrap;gap:4px 0;font-size:14px;line-height:1.5;color:var(--тихий)}
+.сб-10 .реквизиты li+li::before{content:"·";margin:0 10px;color:var(--поле-рамка)}
+@media (max-width:999px){
+.сб-10{--поле:16px}
+.сб-10 .экран{padding:56px 0 64px}
+.сб-10 .раскладка{display:block}
+.сб-10 .кикер{font-size:14px}
+.сб-10 h2{margin-top:16px;font-size:36px;line-height:1.08}
+.сб-10 .подзаголовок{margin-top:16px;font-size:18px}
+.сб-10 .форма{margin-top:28px}
+.сб-10 .поля{grid-template-columns:1fr;gap:16px}
+.сб-10 .поле input{height:56px;font-size:18px}
+.сб-10 .кнопка{display:flex;justify-content:center;width:100%;margin-top:20px;font-size:17px;padding:16px 20px;text-align:left}
+.сб-10 .юр-зона{min-height:64px}
+.сб-10 .контакты{margin-top:40px;padding:32px 0 0;border-left:0;border-top:1px solid var(--линия)}
+.сб-10 .контакты h3{font-size:17px}
+.сб-10 .анна{margin-top:16px}
+.сб-10 .анна__имя{font-size:20px}
+.сб-10 .анна__роль{font-size:16px}
+.сб-10 .анна__тел{display:inline-flex;align-items:center;min-height:44px;margin-top:2px}
+.сб-10 .каналы{margin-top:20px;padding-top:12px;gap:0;font-size:17px}
+.сб-10 .каналы li{display:flex;align-items:center;min-height:44px}
+.сб-10 .каналы a{display:inline-flex;align-items:center;min-height:44px}
+.сб-10 .каналы .почта{flex-wrap:wrap;column-gap:.3em}
+.сб-10 .подвал{padding:24px 0 28px}
+.сб-10 .реквизиты{display:block}
+.сб-10 .реквизиты li+li::before{content:none}
+
+}
+
+</style>
+<style id="шкала-проба-2">
+/* Проба типографической шкалы, коррекция 2 (2026-10-01): экр. 1 лид 19; ярлыки экр. 3 — 17/16; условия экр. 9 — 22/600 · 20/600.
+   Основа — первая проба — поверх общей сборки, только кегль и вес.
+   Шкала: H1 73/42 · H2 56/36 · цена экр. 9 64/40 · H3-крупный 28/24 · H3 пункта 24/22 (700)
+   · лид 21/18 · текст 19/18 · вторичный 17/16 · метка 15/14 · кнопка 17/17 · служебный 14.
+   Строки межстрочного и отступы не меняются (кроме ярлыка «На выбор:», см. ниже). */
+
+@media (min-width:1000px){
+  /* лид */
+  .сб-9 .цена{font-size:21px}
+  /* H3 пункта — 24/700 */
+  .сб-2 h3{font-weight:700}
+  .сб-7 h3{font-size:24px}
+  .сб-9 h3{font-size:22px;font-weight:600}
+  /* H3-крупный — 28/700 */
+  .сб-5 .финал h3{font-size:28px}
+  /* основной текст — 19 */
+  .сб-3 .день__основное{font-size:19px}
+  .сб-3 .вариант{font-size:19px}
+  .сб-3 .вариант__ярлык{font-size:17px;line-height:28.5px}
+  .сб-3 .итог__текст{font-size:19px}
+  .сб-4 .пункт p{font-size:19px}
+  .сб-5 .финал p{font-size:19px}
+  .сб-6 .пара blockquote{font-size:19px}
+  .сб-8 .пара dd{font-size:19px}
+  /* вторичный — 17 */
+  .сб-6 .отзыв--ведущий .автор{font-size:17px}
+  .сб-10 .контакты h3{font-size:17px}
+  .сб-10 .каналы{font-size:17px}
+  .сб-10 .анна__имя{font-size:20px}
+  /* метка — 15 */
+  .сб-7 .роль{font-size:15px}
+  /* цена экрана 9 — 64 на 1440 (было 75), ниже H1 73 и выше H2 56 */
+  .сб-9 .сумма{font-size:clamp(52px,4.45vw,64px)}
+  /* кнопка — 17 */
+  .сб-10 .кнопка{font-size:17px}
+}
+
+@media (max-width:999px){
+  /* метка — 14 */
+  .сб-1 .кикер{font-size:14px}
+  .сб-3 .день__номер{font-size:14px}
+  .сб-7 .роль{font-size:14px}
+  /* H3 пункта — 22/700 */
+  .сб-2 h3{font-weight:700}
+  .сб-9 h3{font-size:20px;font-weight:600}
+  /* H3-крупный — 24/700 */
+  .сб-5 .финал h3{font-size:24px}
+  /* лид — 18 */
+  .сб-9 .цена{font-size:18px}
+  /* основной текст — 18 */
+  .сб-2 .шаг p{font-size:18px}
+  .сб-3 .день__основное{font-size:18px}
+  .сб-3 .вариант{font-size:18px}
+  .сб-3 .вариант__ярлык{font-size:16px;line-height:1.5}
+  .сб-3 .итог__текст{font-size:18px}
+  .сб-4 .пункт p{font-size:18px}
+  .сб-6 .отзыв--ведущий blockquote,.сб-6 .пара blockquote{font-size:18px}
+  /* вторичный — 16 */
+  .сб-1 .цена__подпись{font-size:16px}
+  .сб-6 .автор,.сб-6 .отзыв--ведущий .автор{font-size:16px}
+  .сб-10 .контакты h3{font-size:16px}
+  .сб-10 .каналы{font-size:16px}
+  /* цена экрана 9 — 40 на 390 (было 42 = H1) */
+  .сб-9 .сумма{font-size:clamp(30px,10.25vw,40px)}
+}
+</style>
+<style id="кнопка-зов">
+/* Главная CTA (экраны 1, 3, 5, 10) — правило 10 системы в спокойном варианте (решение человека, 06.10.2026).
+   Объём тихий; дыхание 4 с, +1,5 %, ореол до 12 %; блик белый 18 %, проход ~1,2 с раз в 7 с.
+   Работает всегда, и при «Уменьшении движения». Цвет кнопки, форма, размеры и наведение — прежние. */
+.кнопка--главная{position:relative;overflow:hidden;isolation:isolate;
+  --объём:0 10px 24px rgba(156,42,47,.22),inset 0 1px 0 rgba(255,255,255,.18),inset 0 -2px 0 rgba(0,0,0,.14);
+  box-shadow:var(--объём);animation:зов-кнопки 4s ease-in-out infinite}
+.кнопка--главная::after{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:0;width:30%;pointer-events:none;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.18),transparent);
+  transform:translateX(-160%) skewX(-18deg);animation:блик-кнопки 7s ease-in-out infinite}
+@keyframes зов-кнопки{
+  0%,100%{transform:scale(1);box-shadow:var(--объём),0 0 0 0 rgba(156,42,47,0)}
+  50%{transform:scale(1.015);box-shadow:var(--объём),0 0 16px 4px rgba(156,42,47,.12)}}
+@keyframes блик-кнопки{0%{transform:translateX(-160%) skewX(-18deg)}17%,100%{transform:translateX(430%) skewX(-18deg)}}
+
+/* Экран 1, узкие телефоны (уже 390): главная CTA целиком в окне SE 375×548 (§ 2-bis). 390 и шире — без изменений. */
+@media (max-width:389px){
+  .сб-1 .колонка{padding-top:16px}
+  .сб-1 .фраза{margin-top:12px}
+  .сб-1 .кнопка{margin-top:18px}
+}
+</style>
+<style id="ритм-компьютер">
+/* Вертикальный ритм компьютера (решение человека, 06.10.2026) — только от 1000 px; телефон не затронут.
+   Тексты, кегли и порядок не меняются: уплотнены отступы, промежутки и геометрия экранов 4 и 5.
+   Компактный ритм коротких смысловых экранов 2, 4, 5, 8 — общее поле секции 56 / 56 (решение человека, 06.10.2026). */
+@media (min-width:1000px){
+  /* Экран 2: поле 56 / 56; вводка → ряд шагов 76 → 48; кружок → заголовок шага 30 → 24 */
+  .сб-2 .экран{padding:56px 0 56px}
+  .сб-2 .дни{margin-top:48px}
+  .сб-2 h3{margin-top:24px}
+
+  /* Экран 4: поля секции, промежутки пунктов; место под фото — вертикальный кадр шириной 400 (1000–1199: 2 : 3; от 1200 — по высоте правой колонки, около 3 : 4) */
+  .сб-4 .экран{padding:56px 0 56px}
+  .сб-4 .тело{grid-template-columns:400px minmax(0,1fr);margin-top:40px}
+  .сб-4 .пункты{margin-top:24px}
+  .сб-4 .пункт{padding:18px 0 20px}
+  .сб-4 .пункт--если{margin-top:20px;padding:4px 0 4px 24px}
+
+  /* Экран 5: поля секции и промежутки; финальная плашка — те же пропорции, чуть плотнее */
+  .сб-5 .экран{padding:56px 0 56px}
+  .сб-5 .шаги{margin-top:32px;row-gap:4px}
+  .сб-5 .финал{margin-top:28px;padding:28px 48px}
+
+  /* Экран 8: поле 56 / 56; вводка → вопросы 64 → 40; строки вопрос — ответ 32 / 34 → 22 / 22 (те же линии и колонки) */
+  .сб-8 .экран{padding:56px 0 56px}
+  .сб-8 .вопросы{margin-top:40px}
+  .сб-8 .пара{padding:22px 0 22px}
+}
+@media (min-width:1200px){
+  /* Экран 4: четыре пункта — два ряда по два (те же линии и порядок чтения слева направо); «Когда планы сдвигаются» — ниже, как было */
+  .сб-4 .пункты{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:40px;border-top:0}
+  .сб-4 .пункты .пункт{border-top:1px solid var(--линия);border-bottom:0}
+  .сб-4 .пункты .пункт:nth-child(n+3){border-bottom:1px solid var(--линия)}
+  /* место под фото — прежняя ширина 400, высота = правая колонка: низ фото на одной линии с низом «Когда планы сдвигаются» (около 400×540, кадр ~3 : 4) */
+  .сб-4 .тело{align-items:stretch}
+  .сб-4 .тело .фото{aspect-ratio:auto;min-height:480px}
+  /* ПРОБА «вариант 1» (06.10.2026, не принято): экран 4 под реальное окно ноутбука 1536×≈730 — шрифты прежние;
+     поля и промежутки плотнее, фото 340 в ширину (≈ 3 : 4), колонки пунктов шире */
+  .сб-4 .экран{padding:56px 0 56px}
+  .сб-4 .тело{grid-template-columns:340px minmax(0,1fr);margin-top:28px}
+  .сб-4 .тело .фото{min-height:400px}
+  .сб-4 .пункты{margin-top:16px}
+  .сб-4 .пункты .пункт{padding:10px 0 12px}
+  .сб-4 .пункты .пункт p,.сб-4 .пункт--если p{margin-top:4px}
+  .сб-4 .пункт--если{margin-top:12px}
+
+  /* Экран 5: лесенка в пять ступеней в один ряд — каждая следующая правее и ниже на одну ступень (вместо пяти строк) */
+  .сб-5 .шаги{grid-template-columns:repeat(5,minmax(0,1fr));column-gap:32px;row-gap:0}
+  .сб-5 .шаг,.сб-5 .шаг:nth-child(n){grid-row:1;grid-column:auto}
+  .сб-5 .шаг:nth-child(2){margin-top:24px}
+  .сб-5 .шаг:nth-child(3){margin-top:48px}
+  .сб-5 .шаг:nth-child(4){margin-top:72px}
+  .сб-5 .шаг:nth-child(5){margin-top:96px}
+}
+</style>
+<style id="перетекание">
+/* Мягкий стык соседних секций (принцип системы «соседние экраны перетекают», адаптирован; 06.10.2026) — только компьютер.
+   Все стыки страницы — светло-серый #F6F7F8 ↔ белый: по половинке перехода в обе секции, на кромке они сходятся
+   в среднем тоне и тают по кривой в свой фон. Лежит под содержимым (z-index −1 внутри секции), размеров не меняет. */
+@media (min-width:1000px){
+  .сб-2 .экран,.сб-3 .экран,.сб-4 .экран,.сб-5 .экран,.сб-6 .экран,.сб-7 .экран,.сб-8 .экран,.сб-9 .экран,.сб-10 .экран,.сб-10 .подвал{
+    position:relative;z-index:0}
+  .сб-1 .низ,.сб-2 .экран,.сб-3 .экран,.сб-4 .экран,.сб-5 .экран,.сб-6 .экран,.сб-7 .экран,.сб-8 .экран,.сб-9 .экран,.сб-10 .экран,.сб-10 .подвал{
+    --стык-тон:#FBFBFC}   /* .низ экрана 1 уже свой слой (position:relative; z-index:2) — его не перебиваем */
+  .сб-2 .экран::before,.сб-3 .экран::before,.сб-4 .экран::before,.сб-5 .экран::before,.сб-6 .экран::before,.сб-7 .экран::before,
+  .сб-8 .экран::before,.сб-9 .экран::before,.сб-10 .экран::before,.сб-10 .подвал::before,
+  .сб-1 .низ::after,.сб-2 .экран::after,.сб-3 .экран::after,.сб-4 .экран::after,.сб-5 .экран::after,.сб-6 .экран::after,.сб-7 .экран::after,
+  .сб-8 .экран::after,.сб-9 .экран::after,.сб-10 .экран::after{
+    content:"";position:absolute;left:0;right:0;z-index:-1;height:56px;pointer-events:none;
+    background:linear-gradient(var(--стык-к),var(--стык-тон),color-mix(in srgb,var(--стык-тон) 62%,transparent) 20%,
+      color-mix(in srgb,var(--стык-тон) 30%,transparent) 45%,color-mix(in srgb,var(--стык-тон) 10%,transparent) 72%,transparent)}
+  .сб-2 .экран::before,.сб-3 .экран::before,.сб-4 .экран::before,.сб-5 .экран::before,.сб-6 .экран::before,.сб-7 .экран::before,
+  .сб-8 .экран::before,.сб-9 .экран::before,.сб-10 .экран::before,.сб-10 .подвал::before{top:0;--стык-к:to bottom}
+  .сб-1 .низ::after,.сб-2 .экран::after,.сб-3 .экран::after,.сб-4 .экран::after,.сб-5 .экран::after,.сб-6 .экран::after,.сб-7 .экран::after,
+  .сб-8 .экран::after,.сб-9 .экран::after,.сб-10 .экран::after{bottom:0;--стык-к:to top}
+  /* у тонких полос (полоса фактов экрана 1, подвал) половинка короче — под их поля */
+  .сб-1 .низ::after,.сб-10 .подвал::before{height:24px}
+}
+</style>
+<style id="проба-1Б-3Б">
+/* ПРОБА (06.10.2026, не принято): экран 1 — вариант 1-Б, экран 3 — вариант 3-Б. Только компьютер от 1200 px;
+   разметка не менялась, телефон и 1000–1199 px — прежние. Тексты и кегли прежние (H1 ограничен уровнем шкалы 73). */
+@media (min-width:1200px){
+  /* ── Экран 1 · 1-Б: обложка одной композицией; связь — в один ряд под кнопкой; факты и цена — светлой плашкой на нижней части фото */
+  .сб-1{position:relative}
+  .сб-1 .экран{min-height:0}
+  .сб-1 .колонка{padding:40px 0 32px}
+  .сб-1 h1{font-size:clamp(60px,5.1vw,73px)}
+  .сб-1 .связь{display:flex;flex-wrap:nowrap;align-self:flex-start;width:max-content}
+  .сб-1 .метка{top:20px;bottom:auto}
+  .сб-1 .низ{position:absolute;left:0;right:0;bottom:24px;z-index:2;background:transparent;border-top:0;pointer-events:none}
+  /* плашка: цена — строкой сверху, три факта — под ней столбиком; ширина не заходит на ряд связи (он ≈ 680 px от левого края) */
+  .сб-1 .низ .факты{pointer-events:auto;margin:0 0 0 auto;width:min(560px,calc(100% - 704px));padding:20px 24px;border-radius:16px;
+    background:rgba(255,255,255,.9);box-shadow:0 8px 24px rgba(22,24,27,.08);
+    display:flex;flex-direction:column;align-items:stretch;gap:10px}
+  .сб-1 .низ .факт,.сб-1 .низ .факт:first-child{padding:0;border-left:0}
+  .сб-1 .низ .цена{order:-1;display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;padding:0 0 12px;margin-bottom:2px;
+    border-left:0;border-bottom:1px solid var(--линия)}
+  /* стык 1 → 2: под обложкой больше нет белой полосы — обе стороны одного тона #F6F7F8, половинки перехода здесь не нужны */
+  .сб-1 .низ::after{display:none}
+  .сб-2 .экран::before{display:none}
+
+  /* ── Экран 3 · 3-Б: шапка в одну строку, три дня — тремя колонками, итог с кнопкой — одной строкой */
+  .сб-3 .экран{padding:56px 0 56px}
+  .сб-3 .вводка{max-width:none;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:64px;align-items:end}
+  .сб-3 .вводка .кикер{grid-column:1;grid-row:1}
+  .сб-3 .вводка h2{grid-column:1;grid-row:2}
+  .сб-3 .вводка .подзаголовок{grid-column:2;grid-row:2;margin-top:0;max-width:none}
+  /* колонки дней: без кружков и общей линии экрана 2 — вертикальные разделители между днями */
+  .сб-3 .дни{margin-top:40px;border-top:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+  .сб-3 .день{display:block;padding:0 32px;border-bottom:0;border-left:1px solid var(--линия)}
+  .сб-3 .день:first-child{padding-left:0;border-left:0}
+  .сб-3 .день:last-child{padding-right:0}
+  .сб-3 .день::after,.сб-3 .день__шапка::before{display:none}
+  .сб-3 .день__шапка{padding-left:0}
+  .сб-3 .день__основное{margin-top:16px;max-width:none}
+  .сб-3 .варианты{margin-top:16px;max-width:none}
+  .сб-3 .вариант{display:block;padding:12px 0}
+  .сб-3 .вариант__ярлык{display:block;margin-bottom:2px}
+  .сб-3 .итог{margin-top:40px;grid-template-columns:minmax(0,1fr) auto;column-gap:48px;align-items:center}
+  .сб-3 .итог__текст{grid-column:1;max-width:none}
+  .сб-3 .кнопка{grid-column:2;margin-top:0}
+}
+</style></head>
+<body>
+<!-- ===== экран 1 ===== -->
+<div class="сб-1">
+<header class="шапка"><div class="обёртка">
+  <a href="#"><img class="знак" src="logo.png" alt="Экспонат" width="328" height="294"></a>
+  <nav class="меню" aria-label="Разделы"><a href="#экран-3">Программа</a><a href="#экран-5">Как всё проходит</a><a href="#экран-6">Отзывы</a><a href="#экран-7">Команда</a><a href="#экран-8">Вопросы</a></nav>
+  <button class="бургер" type="button" aria-label="Меню"><svg class="ик" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+<section class="экран">
+  <div class="обёртка"><div class="колонка">
+    <p class="кикер"><span>Школьные поездки в Санкт-Петербург на <span style="white-space:nowrap">2–3 дня</span></span></p>
+    <h1>Везёте класс в Петербург?</h1>
+    <p class="текст">Организуем тёплый приём и знакомство с городом с учётом возраста и интересов детей. А на память о нашей встрече ребята получат подарки.</p>
+    <p class="фраза">Ваша задача — приехать в Петербург. Наша — сделать поездку незабываемой.</p>
+    <a class="кнопка кнопка--главная" href="#экран-10">Рассчитать поездку для нашего класса<svg class="ик" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+    <figure class="фото"><img src="test-kadr.png" alt=""><span class="метка">Тестовый кадр — не финальный</span></figure>
+    <nav class="связь" aria-label="Связаться сразу"><a href="https://max.ru/id781904492171_bot?start=c1775566782887-ds"><svg class="ик" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-11 6.6L4 19.5l1.4-4.6A7.5 7.5 0 1 1 20 11.5z"/></svg><span>Написать в MAX</span></a><a href="https://vk.ru/club90259169"><svg class="ик" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-11 6.6L4 19.5l1.4-4.6A7.5 7.5 0 1 1 20 11.5z"/></svg><span>Написать ВКонтакте</span></a><a href="https://wa.me/79522148253"><svg class="ик" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-11 6.6L4 19.5l1.4-4.6A7.5 7.5 0 1 1 20 11.5z"/></svg><span>Написать в WhatsApp</span></a><a href="tel:+79523541496"><svg class="ик" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16.9v2.6a1.8 1.8 0 0 1-2 1.8 17.8 17.8 0 0 1-7.8-2.8 17.5 17.5 0 0 1-5.4-5.4A17.8 17.8 0 0 1 3 5.3 1.8 1.8 0 0 1 4.8 3.3h2.6a1.8 1.8 0 0 1 1.8 1.6c.1.9.3 1.7.6 2.5a1.8 1.8 0 0 1-.4 1.9L8.3 10.4a14.4 14.4 0 0 0 5.4 5.4l1.1-1.1a1.8 1.8 0 0 1 1.9-.4c.8.3 1.6.5 2.5.6a1.8 1.8 0 0 1 1.6 1.8z"/></svg><span>Позвонить</span></a></nav>
+  </div></div>
+</section>
+<section class="низ"><div class="обёртка">
+  <ul class="факты"><li class="факт"><svg class="ик" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 19v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 17.5V19"/><circle cx="10" cy="7.5" r="3.5"/><path d="M20 19v-1.5a3.5 3.5 0 0 0-2.5-3.35"/><path d="M15.5 4.2a3.5 3.5 0 0 1 0 6.6"/></svg><span>Для школьных групп от 10 человек</span></li><li class="факт"><svg class="ик" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="3.5"/><path d="M5 20v-1.5A4.5 4.5 0 0 1 9.5 14h5a4.5 4.5 0 0 1 4.5 4.5V20"/><path d="M17.5 4.5l1.5 1.5 3-3"/></svg><span>1 сопровождающий бесплатно на каждые 10 школьников</span></li><li class="факт"><svg class="ик" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span>Более 10 лет · 3 000+ поездок</span></li>
+    <li class="цена"><span class="цена__число">от 9 500 ₽</span><span class="цена__подпись">за школьника</span></li></ul>
+</div></section>
+</div>
+<!-- ===== экран 2 ===== -->
+<div class="сб-2">
+<section class="экран" id="экран-2"><div class="обёртка">
+  <div class="шапка-экрана">
+    <h2>В Петербурге вас уже ждут</h2>
+    <p class="подзаголовок">Заранее продумываем, как пройдут ваши дни в Петербурге: где остановится группа, где будет питаться, что увидят дети и как будет построен маршрут.</p>
+  </div>
+  <ol class="дни">
+    <li class="шаг">
+      <div class="шаг__метка"><span class="шаг__знак"><svg class="ик" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21z"/><circle cx="12" cy="10" r="2.4"/></svg></span><span class="шаг__номер">01</span></div>
+      <h3>Встреча в <span class="вторая">Петербурге</span></h3>
+      <p>Встретим группу по прибытии. С этого момента начинается ваше знакомство с Петербургом.</p>
+    </li>
+    <li class="шаг">
+      <div class="шаг__метка"><span class="шаг__знак"><svg class="ик" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19V8"/><path d="M3 15h18v4"/><path d="M21 15v-3a3 3 0 0 0-3-3h-7v6"/><circle cx="7" cy="11.5" r="1.8"/></svg></span><span class="шаг__номер">02</span></div>
+      <h3>Где <span class="вторая">остановиться</span></h3>
+      <p>Поможем подобрать гостиницу с учётом бюджета и пожеланий группы, чтобы детям и сопровождающим было комфортно.</p>
+    </li>
+    <li class="шаг">
+      <div class="шаг__метка"><span class="шаг__знак"><svg class="ик" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8"/><path d="M4.5 3v4.5a2.5 2.5 0 0 0 5 0V3"/><path d="M7 11v10"/><path d="M17 21V3c-2.2 1.2-3.5 3.6-3.5 7v3H17"/></svg></span><span class="шаг__номер">03</span></div>
+      <h3>Питание в <span class="вторая">течение дня</span></h3>
+      <p>Подберём места для питания группы, чтобы не решать этот вопрос уже во время поездки.</p>
+    </li>
+    <li class="шаг">
+      <div class="шаг__метка"><span class="шаг__знак"><svg class="ик" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V10"/><path d="M9.5 21V10"/><path d="M14.5 21V10"/><path d="M19 21V10"/><path d="M3 10h18L12 4 3 10z"/></svg></span><span class="шаг__номер">04</span></div>
+      <h3>Петербург <span class="вторая">с гидом</span></h3>
+      <p>Экскурсии и передвижения планируем так, чтобы детям было интересно открывать Петербург.</p>
+    </li>
+    <li class="шаг">
+      <div class="шаг__метка"><span class="шаг__знак"><svg class="ик" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16.9v2.6a1.8 1.8 0 0 1-2 1.8 17.8 17.8 0 0 1-7.8-2.8 17.5 17.5 0 0 1-5.4-5.4A17.8 17.8 0 0 1 3 5.3 1.8 1.8 0 0 1 4.8 3.3h2.6a1.8 1.8 0 0 1 1.8 1.6c.1.9.3 1.7.6 2.5a1.8 1.8 0 0 1-.4 1.9L8.3 10.4a14.4 14.4 0 0 0 5.4 5.4l1.1-1.1a1.8 1.8 0 0 1 1.9-.4c.8.3 1.6.5 2.5.6a1.8 1.8 0 0 1 1.6 1.8z"/></svg></span><span class="шаг__номер">05</span></div>
+      <h3>Координатор <span class="вторая">на связи</span></h3>
+      <p>Во время поездки координатор «Экспоната» остаётся на связи и помогает с организационными вопросами.</p>
+    </li>
+  </ol>
+</div></section>
+</div>
+<!-- ===== экран 3 ===== -->
+<div class="сб-3">
+<section class="экран" id="экран-3"><div class="обёртка">
+  <div class="вводка">
+    <p class="кикер"><span>Пример программы на 2–3 дня</span></p>
+    <h2>Что может увидеть ваш класс в Петербурге</h2>
+    <p class="подзаголовок">Показываем один из вариантов, чтобы было проще представить будущую поездку. А какой будет ваша — решим вместе.</p>
+  </div>
+  <ol class="дни">
+    <li class="день">
+      <div class="день__шапка"><p class="день__номер">День 1</p><h3>Классический Петербург</h3></div>
+      <div>
+        <p class="день__основное">Знакомимся с Петербургом: Невский проспект, Дворцовая площадь, Исаакиевский собор, Медный всадник и Петропавловская крепость.</p>
+        <ul class="варианты">
+          <li class="вариант"><span class="вариант__ярлык">На выбор:</span> <span>«Петровская Акватория», подъём на колоннаду Исаакиевского собора или квест по Эрмитажу.</span></li>
+          <li class="вариант"><span class="вариант__ярлык">Особый вариант:</span> <span>ночная Петропавловская крепость и прогулка на кораблике.</span></li>
+        </ul>
+      </div>
+    </li>
+    <li class="день">
+      <div class="день__шапка"><p class="день__номер">День 2</p><h3>Петергоф и Кронштадт</h3></div>
+      <div>
+        <p class="день__основное">Едем в Петергоф — в Нижний парк, а затем в Кронштадт — к Морскому Никольскому собору и в парк «Остров фортов».</p>
+        <ul class="варианты">
+          <li class="вариант"><span class="вариант__ярлык">По желанию:</span> <span>форт Константин или Музей маячной службы.</span></li>
+        </ul>
+      </div>
+    </li>
+    <li class="день">
+      <div class="день__шапка"><p class="день__номер">День 3</p><h3>Царское Село</h3><p class="метка">для поездки на 3 дня</p></div>
+      <div>
+        <p class="день__основное">Едем в Царское Село: Екатерининский дворец, Янтарная комната и прогулка по Екатерининскому парку.</p>
+        <ul class="варианты">
+          <li class="вариант"><span class="вариант__ярлык">После обеда на выбор:</span> <span>Гранд Макет Россия, Музей железных дорог России, подводная лодка Д-2 «Народоволец» или Планетарий №1.</span></li>
+        </ul>
+      </div>
+    </li>
+  </ol>
+  <div class="итог">
+    <p class="итог__текст">Программу составляем вместе с вами: учитываем возраст и интересы детей, ваши пожелания и задачи поездки. Порядок дней зависит от времени прибытия и отъезда группы и часов работы музеев.</p>
+    <a class="кнопка кнопка--главная" href="#экран-10">Получить программу и расчёт для нашего класса<svg class="ик" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+  </div>
+</div></section>
+</div>
+<!-- ===== экран 4 ===== -->
+<div class="сб-4">
+<section class="экран" id="экран-4"><div class="обёртка">
+  <div class="вводка">
+    <p class="кикер"><span>Детям — впечатления, учителю — спокойствие</span></p>
+    <h2>Организационные вопросы не остаются только на вас</h2>
+  </div>
+  <div class="тело">
+    <div class="фото" role="img" aria-label="Место под фотографию: гид работает с группой школьников в Петербурге">
+      <svg class="фото__рамка" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 16l-5-5-9 8"/></svg>
+      <p class="фото__метка"><b>Место под фотографию</b><span>Гид работает с группой школьников в Петербурге · <span class="на-компьютере">вертикальный кадр около 3&nbsp;:&nbsp;4</span><span class="на-телефоне">кадр около 4&nbsp;:&nbsp;5</span></span></p>
+    </div>
+    <div>
+      <p class="подзаголовок">Пока класс знакомится с Петербургом, мы следим за тем, чтобы поездка шла по плану, и помогаем, если обстоятельства меняются.</p>
+      <ul class="пункты">
+        <li class="пункт"><h3>Следим за ходом программы</h3><p>Во время поездки следим за временем, маршрутом и организационными деталями.</p></li>
+        <li class="пункт"><h3>Не перегружаем программу</h3><p>Иногда лучше увидеть меньше, но оставить детям время спокойно познакомиться с городом.</p></li>
+        <li class="пункт"><h3>Транспорт для группы</h3><p>Для переездов во время программы работаем с транспортными компаниями, с которыми уже сотрудничаем.</p></li>
+        <li class="пункт"><h3>Экскурсии, понятные детям</h3><p>Гиды не просто рассказывают о Петербурге, а вовлекают ребят в разговор и отвечают на их вопросы.</p></li>
+      </ul>
+      <div class="пункт пункт--если"><h3>Когда планы сдвигаются</h3><p>Если группа задерживается или меняется время, координатор помогает скорректировать программу там, где это возможно.</p></div>
+    </div>
+  </div>
+</div></section>
+</div>
+<!-- ===== экран 5 ===== -->
+<div class="сб-5">
+<section class="экран" id="экран-5"><div class="обёртка">
+  <div class="вводка">
+    <p class="кикер"><span>От заявки до поездки</span></p>
+    <h2>Что будет после вашей заявки</h2>
+  </div>
+  <ol class="шаги">
+    <li class="шаг"><h3>Заявка</h3><p>Оставляете имя и телефон.</p></li>
+    <li class="шаг"><h3>Обсуждаем поездку</h3><p>Перезваниваем, уточняем детали и договариваемся, где вам будет удобнее продолжить общение.</p></li>
+    <li class="шаг"><h3>Программа и расчёт</h3><p>По итогам разговора готовим вариант программы для вашего класса и рассчитываем стоимость поездки.</p></li>
+    <li class="шаг"><h3>Согласовываем программу</h3><p>Обсуждаем варианты вместе с вами: выбираем подходящие, при необходимости вносим изменения и пересчитываем стоимость.</p></li>
+    <li class="шаг"><h3>Договор и подготовка к поездке</h3><p>Заключаем договор с предоплатой 30% и готовимся к поездке по согласованной программе.</p></li>
+  </ol>
+  <div class="финал">
+    <div>
+      <h3>А дальше — Петербург</h3>
+      <p>В назначенный день встречаем вашу группу, и начинается программа.</p>
+    </div>
+    <a class="кнопка кнопка--главная" href="#экран-10">Получить программу и расчёт для нашего класса<svg class="ик" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+  </div>
+</div></section>
+</div>
+<!-- ===== экран 6 ===== -->
+<div class="сб-6">
+<section class="экран" id="экран-6"><div class="обёртка">
+  <div class="вводка">
+    <p class="кикер"><span>Отзывы о поездках</span></p>
+    <h2>Что говорят о поездках с «Экспонатом»</h2>
+  </div>
+  <div class="отзывы">
+    <figure class="отзыв отзыв--ведущий">
+      <figcaption class="автор"><b>Юлия Мотси</b>, Москва</figcaption>
+      <blockquote><span class="строка">«Здравствуйте. Хочу выразить благодарность Ольге за чуткий подход, организованность и чёткость всех мероприятий которые она нам организовала. 27-29.05. 2024 года возила группу школьников из Москвы в Питер. В восторге дети, руководители и родители!!! От проживания до питания, от экскурсий до экскурсовода Инны Семёновны, всё на высочайшем уровне. Теперь в Питер только к вам и с вами. Спасибо!!!!!»</span></blockquote>
+    </figure>
+    <div class="пара">
+      <figure class="отзыв">
+        <figcaption class="автор"><b>Лариса Казакова</b>, Брянск</figcaption>
+        <blockquote><span class="строка">«Добрый солнечный день !</span><span class="строка">Сегодня вернулись с 9 классом из поездки в замечательный город <span class="целиком">Санкт-Петербург</span></span><span class="строка">Эмоции самые лучшие</span><span class="строка">Хотим выразить особую благодарность организатору нашей поездке, Ольге</span><span class="строка">Оля, вы умничка, спасибо вам огромное за организацию нашего отдыха и постоянную связь, дети и взрослые в восторге</span><span class="строка">Вы лучшие, это правда</span><span class="строка">Отдельное спасибо нашему гиду Инне, экскурсии прошли максимально интересно и насыщенно</span><span class="строка">Подводя итог, хочу сказать, что турагентство "Экспонат", а в частности Оля профессионалы своего дела, рекомендую однозначно, не пожалеете</span><span class="строка">С благодарностью туристы из Брянска»</span></blockquote>
+      </figure>
+      <figure class="отзыв">
+        <figcaption class="автор"><b>Елена Гаврилова</b>, Сегежа, Карелия</figcaption>
+        <blockquote><span class="строка">«27 мая, дети из город Сегежа, Карелия, посетили с экскурсиями Санкт-Петербург.</span><span class="строка">Спасибо вам за грамотную организацию нашего путешествия от вокзала до вокзала</span><span class="строка">Программа путешествия была познавательна и обширна: Петропавловская крепость, автобусная экскурсия по городу, фестиваль мороженого, этнографический музей, макет - музей " Петровская акватория".</span><span class="строка">Будет сотрудничать с вами ещё и рекомендовать другим»</span></blockquote>
+      </figure>
+    </div>
+  </div>
+</div></section>
+</div>
+<!-- ===== экран 7 ===== -->
+<div class="сб-7">
+<section class="экран" id="экран-7"><div class="обёртка раскладка">
+  <div class="вводка">
+    <p class="кикер"><span>Люди за вашей поездкой</span></p>
+    <h2>Познакомьтесь с командой «Экспоната»</h2>
+  </div>
+  <ul class="люди">
+    <li class="человек">
+      <div class="портрет портрет--ольга"><img src="olga-merzhuk.jpg" alt="Ольга Мержук"></div>
+      <h3>Ольга Мержук</h3>
+      <p class="роль">Руководитель «Экспоната».</p>
+      <p class="о-человеке">Создаёт экскурсии для школьников и знакомит их с Петербургом.</p>
+    </li>
+    <li class="человек">
+      <div class="портрет портрет--анна"><img src="anna-vasilieva.jpg" alt="Анна Васильева"></div>
+      <h3>Анна Васильева</h3>
+      <p class="роль">Координатор школьных поездок.</p>
+      <p class="о-человеке">С ней вы будете обсуждать детали вашей поездки.</p>
+    </li>
+  </ul>
+</div></section>
+</div>
+<!-- ===== экран 8 ===== -->
+<div class="сб-8">
+<section class="экран" id="экран-8"><div class="обёртка">
+  <div class="вводка">
+    <p class="кикер"><span>Частые вопросы</span></p>
+    <h2>Что обычно спрашивают перед поездкой</h2>
+  </div>
+  <dl class="вопросы">
+    <div class="пара"><dt>Для какого возраста подходят поездки?</dt><dd>Для школьных групп с 1 по 11 класс. При составлении программы учитываем возраст детей.</dd></div>
+    <div class="пара"><dt>Мы приезжаем самолётом или автобусом, а не поездом. Вы нас встретите?</dt><dd>Да. Встречаем группу по прибытии в Петербург — независимо от того, приехали вы поездом, самолётом или автобусом.</dd></div>
+    <div class="пара"><dt>Входит ли в стоимость проезд до Петербурга и обратно?</dt><dd>Нет. Билеты до Петербурга и обратно группа покупает самостоятельно.</dd></div>
+    <div class="пара"><dt>Поможете выбрать гостиницу?</dt><dd>Да. Подберём варианты с учётом бюджета и пожеланий группы, а вы выберете подходящий.</dd></div>
+    <div class="пара"><dt>Кто будет на связи во время поездки?</dt><dd>Ваш координатор — Анна Васильева.</dd></div>
+  </dl>
+</div></section>
+</div>
+<!-- ===== экран 9 ===== -->
+<div class="сб-9">
+<section class="экран" id="экран-9"><div class="обёртка">
+  <div class="верх">
+    <div class="вводка">
+      <p class="кикер"><span>Расчёт для вашего класса</span></p>
+      <h2>Стоимость считаем под вашу группу</h2>
+    </div>
+    <p class="цена"><span class="сумма">От 9 500 ₽ <span class="за">за школьника</span></span> — ориентир для начала расчёта. Итоговая стоимость зависит от вашей группы и выбранной программы.</p>
+  </div>
+  <ul class="условия">
+    <li class="условие"><h3>Цена зависит от состава группы и программы</h3><p>Учитываем количество детей и взрослых и то, какой будет программа вашего класса.</p></li>
+    <li class="условие"><h3>1 сопровождающий бесплатно на каждые 10 школьников</h3></li>
+    <li class="условие"><h3><span class="целиком">Предоплата — 30%</span></h3><p>Работаем по договору.</p></li>
+  </ul>
+</div></section>
+</div>
+<!-- ===== экран 10 ===== -->
+<div class="сб-10">
+<section class="экран" id="экран-10"><div class="обёртка раскладка">
+  <div>
+    <p class="кикер"><span>Поездка вашего класса</span></p>
+    <h2>Расскажите о вашем классе — соберём программу и расчёт</h2>
+    <p class="подзаголовок">Оставьте имя и телефон — мы перезвоним и обсудим детали поездки.</p>
+    <form class="форма" onsubmit="return false">
+      <div class="поля">
+        <label class="поле"><span>Имя</span><input type="text" name="имя" autocomplete="name"></label>
+        <label class="поле"><span>Телефон</span><input type="tel" name="телефон" autocomplete="tel" inputmode="tel"></label>
+      </div>
+      <button class="кнопка кнопка--главная" type="submit">Получить программу и расчёт для нашего класса<svg class="ик" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></button>
+      <div class="юр-зона" aria-hidden="true"></div>
+    </form>
+  </div>
+  <aside class="контакты">
+    <h3>Или свяжитесь с нами напрямую</h3>
+    <div class="анна">
+      <p class="анна__имя">Анна Васильева</p>
+      <p class="анна__роль">Координатор школьных поездок</p>
+      <a class="анна__тел" href="tel:+79523541496">+7 952 354-14-96</a>
+    </div>
+    <ul class="каналы">
+      <li><a href="https://max.ru/id781904492171_bot?start=c1775566782887-ds">Написать в MAX</a></li>
+      <li><a href="https://vk.ru/club90259169">Написать ВКонтакте</a></li>
+      <li class="почта">Email: <a href="mailto:exponat-spb@mail.ru">exponat-spb@mail.ru</a></li>
+    </ul>
+  </aside>
+</div></section>
+<footer class="подвал"><div class="обёртка">
+  <ul class="реквизиты">
+    <li>ИП Мержук О.А.</li>
+    <li>ИНН 781904492171</li>
+    <li>ОГРНИП 316470400080944</li>
+    <li>Санкт-Петербург, Большой проспект В.О., 47</li>
+  </ul>
+</div></footer>
+</div>
+</body></html>
